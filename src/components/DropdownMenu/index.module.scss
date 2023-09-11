@@ -1,0 +1,78 @@
+.dropdown-menu {
+    position: relative;
+
+    &__toggle {
+        position: relative;
+        padding: 0 10px;
+        width: 100px;
+        background: #fff;
+        border: none;
+        border-radius: 4px;
+        outline: none;
+        display: flex;
+        justify-content: center;
+        cursor: pointer;
+
+        &-label {
+            color: #333;
+            font: normal normal 16px/40px sans-serif;
+            letter-spacing: 1px;
+            white-space: nowrap;
+        }
+
+        &-icon {
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .caret {
+                &.active {
+                    transform: rotate(90deg);
+                }
+
+                width: 20px;
+                height: 20px;
+                fill: #000;
+                transform: rotate(-90deg);
+                transition: 0.2s;
+
+                path {
+                    pointer-events: none;
+                }
+            }
+        }
+    }
+
+    &__list {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        margin-top: 4px;
+        padding: 0;
+        width: 100%;
+        border-radius: 4px;
+        background-color: #fff;
+        overflow: hidden;
+        z-index: 1;
+
+        &-item {
+            padding: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            list-style: none;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+
+            &:hover {
+                background-color: #f3f3f3;
+            }
+
+            &.active {
+                background-color: #f3f3f3;
+                font-weight: bold;
+            }
+        }
+    }
+}
