@@ -1,1 +1,4 @@
 node_modules
+
+# 開發
+/src/utils/firebase.ts
